@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
     LightModeOutlined,
     DarkModeOutlined,
@@ -6,17 +6,12 @@ import {
 import FlexBetween from 'components/FlexBetween';
 import { useDispatch } from 'react-redux';
 import { setMode } from 'state';
-import { AppBar, Box, Button, IconButton, InputBase, Menu, MenuItem, Toolbar, Typography, useTheme } from '@mui/material';
+import { AppBar, IconButton, Toolbar, Typography, useTheme } from '@mui/material';
 
 
 const Navbar = () => {
     const dispatch = useDispatch();
     const theme = useTheme();
-
-    const [anchorEl, setAnchorEl] = useState(null)
-    // const isOpen = Boolean(anchorEl)
-    // const handleClick = (event) => setAnchorEl(event.currentTarget);
-    // const handleClose = () => setAnchorEl(null);
     return <AppBar
         sx={{
             position: "static",
