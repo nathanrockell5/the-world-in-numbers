@@ -6,6 +6,7 @@ import { useMemo } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Layout from "scenes/layout";
 import Home from "scenes/home";
+import About from "scenes/about"
 
 function App() {
   const mode = useSelector((state) => state.global.mode);
@@ -19,6 +20,7 @@ function App() {
             <Route element={<Layout />}>
               <Route path="/" element={<Navigate to="/home" replace />} />
               <Route path="/home" element={<Home />} />
+              <Route path="/about" element={<About />} />
             </Route>
           </Routes>
         </ThemeProvider>

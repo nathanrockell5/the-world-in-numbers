@@ -1,8 +1,9 @@
 import React from 'react'
-import { Box, Button, Typography, useTheme } from '@mui/material'
+import { Box, Typography, useTheme } from '@mui/material'
 import FlexBetween from './FlexBetween';
+import { Opacity } from '@mui/icons-material';
 
-const InfoSquare = ({ title, measurement, value, source, backgroundImg }) => {
+const QuestionSquare = ({ title, backgroundImg }) => {
     const theme = useTheme();
     return (
         <Box
@@ -13,7 +14,7 @@ const InfoSquare = ({ title, measurement, value, source, backgroundImg }) => {
             alignContent="center"
             alignItems="center"
             height="80vh"
-            justifyContent="space-evenly"
+            justifyContent="space-around"
             sx={{
                 backgroundImage: `url(${backgroundImg})`,
                 backgroundSize: 'cover',
@@ -29,10 +30,8 @@ const InfoSquare = ({ title, measurement, value, source, backgroundImg }) => {
             <FlexBetween>
                 <Typography variant='h1'>{title}</Typography>
             </FlexBetween>
-            <Typography variant='h2'>{value} {measurement}</Typography>
-            <a href={source}><Button variant='h3'>Source</Button></a>
         </Box >
     )
 }
 
-export default InfoSquare
+export default QuestionSquare
