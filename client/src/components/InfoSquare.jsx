@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Button, Typography, useTheme } from '@mui/material'
 import FlexBetween from './FlexBetween';
 
-const InfoSquare = ({ title, measurement, value, source, backgroundImg }) => {
+const InfoSquare = ({ data }) => {
     const theme = useTheme();
     return (
         <Box
@@ -15,7 +15,7 @@ const InfoSquare = ({ title, measurement, value, source, backgroundImg }) => {
             height="80vh"
             justifyContent="space-evenly"
             sx={{
-                backgroundImage: `url(${backgroundImg})`,
+                backgroundImage: `url(${data.imgSource})`,
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
                 backgroundBlendMode: "multiply",
@@ -27,10 +27,10 @@ const InfoSquare = ({ title, measurement, value, source, backgroundImg }) => {
                 Opacity: 0.5,
             }}>
             <FlexBetween>
-                <Typography variant='h1'>{title}</Typography>
+                <Typography variant='h1'>{data.title}</Typography>
             </FlexBetween>
-            <Typography variant='h2'>{value} {measurement}</Typography>
-            <a href={source}><Button variant='h3'>Source</Button></a>
+            <Typography variant='h2'>{data.value} {data.measurement}</Typography>
+            <a href={data.source}><Button variant='h3'>Source</Button></a>
         </Box >
     )
 }

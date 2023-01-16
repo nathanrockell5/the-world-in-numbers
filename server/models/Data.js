@@ -6,15 +6,19 @@ const DataSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
-        measurement: {
-            type: String,
-            required: true,
-        },
         value: {
             type: Number,
             required: true,
         },
+        measurement: {
+            type: String,
+            required: true,
+        },
         source: {
+            type: String,
+            required: true,
+        },
+        imgSource: {
             type: String,
             required: true,
         },

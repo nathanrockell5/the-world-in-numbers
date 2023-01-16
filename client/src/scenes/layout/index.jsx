@@ -10,7 +10,6 @@ const Layout = () => {
         <Box display={isNonMobile ? "flex" : "block"} width="100%" height="100%">
             <Box flexGrow={1}>
                 <NavBar />
-                <HLButtons />
                 <Outlet />
             </Box>
         </Box>
